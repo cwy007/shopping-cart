@@ -39,5 +39,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addToCart }
+  { addToCart } // object
 )(BooksContainer)

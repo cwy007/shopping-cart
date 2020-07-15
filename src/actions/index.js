@@ -13,8 +13,11 @@ const getProductsAction = products => ({
 /**
  * Action 创建函数
  * 创建一个被绑定的 action 创建函数来自动 dispatch
+ * Redux Thunk middleware allows you to write action creators that return a function instead of an action.
+ * thunk 形（式）实（在）转换程序
  */
 export const getAllProducts = () => dispatch => {
+  // console.log("dispatch", dispatch);
   shop.getProducts(products => {
     dispatch(getProductsAction(products))
   })
@@ -33,8 +36,8 @@ const addToCartAction = productId => ({
  * 加入购物车
  */
 export const addToCart = productId => (dispatch, getState) => {
-  if (getState().products.byId[productId].inventory > 0) {
-    dispatch(addToCartAction(productId))
+  if (getState().products.byId[productId].inventory > 0) { // 库存不为空
+    dispatch(addToCartAction(productId))                   // dispatch(actionCreator)
   }
 }
 

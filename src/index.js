@@ -5,7 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { Provider } from "react-redux";       // 顶层组件，用于包裹原有的组件
 import { createLogger } from "redux-logger";  // 中间件，日志打印
-import thunk from "redux-thunk";              // 中间件
+import thunk from "redux-thunk";              // 中间件, action creators
 import reducer from "./reducers";             // 应用的 Reducer
 import { getAllProducts } from "./actions";   // 应用的 Action
 import App from "./containers/App.jsx";       // 应用的 UI组件

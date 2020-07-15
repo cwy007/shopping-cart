@@ -28,7 +28,7 @@ const byId = (state = {}, action) => {
       if (productId) {
         return {
           ...state,
-          [productId]: products(state[productId], action)
+          [productId]: products(state[productId], action) // addToCardAction
         }
       }
       return state

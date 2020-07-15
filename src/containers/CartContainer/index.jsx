@@ -8,7 +8,8 @@ const CartContainer = ({ products, total, checkout }) => {
   const hasProducts = products.length > 0;
   return (
     <div>
-      <h3>您的购物车</h3><em>请选择以上商品</em>
+      <h3>您的购物车</h3>
+      <em>请选择以上商品</em>
       <div className="cart-container">
         <div>
           {
